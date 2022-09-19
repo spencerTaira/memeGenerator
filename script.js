@@ -3,21 +3,27 @@ document.addEventListener('DOMContentLoaded', function() {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const imageLink = document.querySelector('#imageLink')
-    const memeText = document.querySelector('#memeText');
+    const memeTextTop = document.querySelector('#memeTextTop');
+    const memeTextBot = document.querySelector('#memeTextBottom')
     const img = document.createElement('img');
     const testDiv = document.createElement('div');
-    const textDiv = document.createElement('p');
+    const textDivTop = document.createElement('p');
+    const textDivBot = document.createElement('p');
     testDiv.style.position = 'relative';
-    textDiv.style.position = 'absolute';
+    textDivTop.style.position = 'absolute';
+    textDivBot.style.position = 'absolute';
     testDiv.style.padding = '10px';
-    textDiv.innerHTML = 'testing';
-    textDiv.style.top = '0px';
+    textDivTop.style.top = '0px';
+    textDivBot.style.bottom = '0px';
     form.append(testDiv);
-    textDiv.textContent = memeText.value;
-    testDiv.appendChild(textDiv);
+    textDivTop.textContent = memeTextTop.value;
+    textDivBot.textContent = memeTextBot.value;
+    testDiv.appendChild(textDivTop);
+    testDiv.appendChild(textDivBot);
     img.src = imageLink.value;
     imageLink.value = '';
-    memeText.value = '';
+    memeTextTop.value = '';
+    memeTextBot.value = '';
     testDiv.append(img);
   });
 });
