@@ -10,11 +10,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const textDivTop = document.createElement('p');
     const textDivBot = document.createElement('p');
     testDiv.style.position = 'relative';
+    testDiv.style.display = 'inline-block'; //inline-block;
     textDivTop.style.position = 'absolute';
     textDivBot.style.position = 'absolute';
     testDiv.style.padding = '10px';
     textDivTop.style.top = '0px';
+    textDivTop.style.left = '50%';
+    textDivTop.style.transform = 'translate(-50%, 0%)';
     textDivBot.style.bottom = '0px';
+    textDivBot.style.left = '50%';
+    textDivBot.style.transform = 'translate(-50%, 0%)';
+    textDivBot.style.fontSize = '20px';
     form.append(testDiv);
     textDivTop.textContent = memeTextTop.value;
     textDivBot.textContent = memeTextBot.value;
