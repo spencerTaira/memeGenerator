@@ -1,0 +1,33 @@
+body {
+    margin: 0px;
+    background-color: rgb(77, 117, 169);
+}
+
+h1 {
+    /* background-color: rgb(77, 117, 169); */
+    text-align: center;
+
+}
+
+#memeTextTop {
+    width: 50%;
+}
+
+#memeTextBottom {
+    width: 50%;
+}
+
+#imageLink {
+    width: 50%;
+}
+
+form {
+    /* background-color: rgb(77, 117, 169); */
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+input {
+    margin-bottom: 10px;
+}
